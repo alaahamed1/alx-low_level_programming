@@ -3,7 +3,8 @@
  * main - function that prints the sizes of various data types using printf
  * Return: 0 (success)
  */
-int main(void) {
+int main(void)
+{
     char a;
     int b;
     long int c;
