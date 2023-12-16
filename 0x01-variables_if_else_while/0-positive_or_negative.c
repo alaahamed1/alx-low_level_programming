@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - print whether the number stored in the variable n is positive or negative
- * Return: returns 0 on success
+ * main - Entry point of the program
+ * Return: Always returns 0 to indicate success
  */
 int main(void)
 {
