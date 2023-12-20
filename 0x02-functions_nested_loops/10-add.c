@@ -3,11 +3,10 @@
 
 /**
 * add - entry point
-*  *Description: function that adds two integers and
-* @param n1 
-* @param n2 
-* 
-* @return: sum
+*Description: function that adds two integers and
+* @n1: integer one
+* @n2: integer two
+* Return:sum.
 */
 
 
