@@ -10,12 +10,13 @@ char L;
 int i;
 i = 0;
 
-while (i < 10)
+while (i <= 9)
 {
-for (L = 'a'; L <= 'z'; L++)
+for (L = 97; L <= 122; L++)
 {
 _putchar(L);
 }
 _putchar('\n');
+i++;
 }
 }
