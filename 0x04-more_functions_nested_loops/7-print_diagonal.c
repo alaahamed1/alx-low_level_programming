@@ -10,21 +10,20 @@ void print_diagonal(int n)
 if (n <= 0)
 {
 _putchar('\n');
-return;
 }
-int i = 0;
-while (i < n)
+else
 {
-int j = 0;
-while (j < n)
+int a, b;
+for (a = 0; a < n; a++)
 {
-if (j == i)
+for (b = 0; b < n; b++)
+{
+if (b == a)
 _putchar('\\');
-else if (j < i)
+else if (b < a)
 _putchar(' ');
-j++;
 }
 _putchar('\n');
-i++;
+}
 }
 }
