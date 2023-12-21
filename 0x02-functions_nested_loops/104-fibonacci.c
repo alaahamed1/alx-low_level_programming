@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "main.h"
 int main(void) {
 unsigned long a = 1, b = 2, nextTerm;
 
