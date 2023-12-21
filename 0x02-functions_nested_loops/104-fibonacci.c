@@ -5,11 +5,12 @@ unsigned long a = 1, b = 2, nextTerm;
 
 printf("%lu, %lu, ", a, b);
 
-for (int i = 3; i <= 50; ++i) {
+for (int i = 3; i <= 98; ++i) {
 nextTerm = a + b;
+
 printf("%lu", nextTerm);
 
-if (i != 50) {
+if (i != 98) {
 printf(", ");
 }
 
