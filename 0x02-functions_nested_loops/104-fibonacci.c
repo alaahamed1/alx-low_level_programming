@@ -1,13 +1,13 @@
 #include <stdio.h>
-#include "main.h"
+
 int main(void) {
 unsigned long a = 1, b = 2, nextTerm;
+int i = 3;
 
 printf("%lu, %lu, ", a, b);
 
-for (int i = 3; i <= 98; ++i) {
+while (i <= 98) {
 nextTerm = a + b;
-
 printf("%lu", nextTerm);
 
 if (i != 98) {
@@ -16,6 +16,7 @@ printf(", ");
 
 a = b;
 b = nextTerm;
+i++;
 }
 
 printf("\n");
