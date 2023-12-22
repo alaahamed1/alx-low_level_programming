@@ -1,1 +1,3 @@
-0x00. C - Hello, World
+#Description This repo is for the C projects with ALX SE program
+
+still developing...
