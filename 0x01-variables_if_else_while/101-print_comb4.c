@@ -1,50 +1,28 @@
 #include <stdio.h>
-/**
- * main - Entry point
- *
- * this code prints all possible combinations of single-digit numbers.
- * followed by a new line.
- * It is not allowed to use any variable of type char
- * only use the putchar function
- * (every other function (printf, puts, etc…) is forbidden)
- * only use putchar four times max in your code
- *
- * Return: 0 (Success)
- */
+
 int main(void)
 {
-	int n1;
-	int n2;
-	int n3;
+int n1, n2, n3;
 
-	n1 = 48;	/* 0 */
-	n2 = 49;	/* 1 */
-	n3 = 50;	/* 2 */
-	while (n1 <= 55)
-	{
-		n2 = n1 + 1;
-		n3 = n2 + 1;
+for (n1 = '0'; n1 <= '7'; n1++)
+{
+for (n2 = n1 + 1; n2 <= '8'; n2++)
+{
+for (n3 = n2 + 1; n3 <= '9'; n3++)
+{
+putchar(n1);
+putchar(n2);
+putchar(n3);
 
-		while (n2 <= 56)
-		{
-			n3 = n2 + 1;
-			while (n3 <= 57)
-			{
-				putchar(n1);
-				putchar(n2);
-				putchar(n3);
-				if ((n1 + n2 + n3) != 168)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-				n3++;
-			}
-			n2++;
-		}
-		n1++;
-	}
+if (n1 != '7' || n2 != '8' || n3 != '9')
+{
+putchar(',');
+putchar(' ');
+}
+}
+}
+}
 
-	putchar('\n');
-	return (0);
+putchar('\n');
+return (0);
 }
