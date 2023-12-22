@@ -6,8 +6,8 @@ int i = 3;
 
 printf("%lu, %lu, ", a, b);
 
-while (i <= 98) {
 nextTerm = a + b;
+while (i <= 98) {
 printf("%lu", nextTerm);
 
 if (i != 98) {
