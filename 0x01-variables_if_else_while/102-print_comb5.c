@@ -2,42 +2,18 @@
 
 int main(void)
 {
-int n1, n2;
+int n;
 
-for (n1 = 0; n1 <= 99; n1++)
+for (n = 1; n <= 100; n++)
 {
-for (n2 = n1 + 1; n2 <= 99; n2++)
+putchar((n / 10) % 10 + '0');
+putchar(n % 10 + '0');
+if (n < 100)
 {
-if (n1 < 10)
-{
-putchar('0');
-putchar(n1 + '0');
-}
-else
-{
-putchar((n1 / 10) + '0');
-putchar((n1 % 10) + '0');
-}
-putchar(' ');
-if (n2 < 10)
-{
-putchar('0');
-putchar(n2 + '0');
-}
-else
-{
-putchar((n2 / 10) + '0');
-putchar((n2 % 10) + '0');
-}
-
-if (!(n1 == 98 && n2 == 99))
-{
-putchar(',');
-putchar(' ');
-}
+putchar((n < 99) ? ',' : '\n');
+putchar((n < 99) ? ' ' : '\0');
 }
 }
 
-putchar('\n');
 return (0);
 }
