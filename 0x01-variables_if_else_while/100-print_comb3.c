@@ -5,7 +5,8 @@
  * Return: 0 (Success)
  */
 
-int main(void) {
+int main(void)
+{
 int n1, n2;
 
 for (n1 = 0; n1 < 9; n1++)
