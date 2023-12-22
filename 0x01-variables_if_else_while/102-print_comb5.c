@@ -1,19 +1,26 @@
 #include <stdio.h>
 
+/**
+* main - Entry point
+* Return: Always 0 (Success)
+*/
+
 int main(void)
 {
-int n;
+int n1, n2;
 
-for (n = 1; n <= 100; n++)
+for (n1 = 0; n1 <= 99; n1++)
 {
-putchar((n / 10) % 10 + '0');
-putchar(n % 10 + '0');
-if (n < 100)
+for (n2 = n1 + 1; n2 <= 99; n2++)
 {
-putchar((n < 99) ? ',' : '\n');
-putchar((n < 99) ? ' ' : '\0');
+printf("%02d %02d", n1, n2);
+if (!(n1 == 98 && n2 == 99))
+{
+printf(", ");
 }
 }
+}
 
+putchar('\n');
 return (0);
 }
