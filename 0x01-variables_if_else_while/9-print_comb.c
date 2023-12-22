@@ -1,26 +1,25 @@
 #include <stdio.h>
 
-
 /**
-* main- entry point
-* Return:return 0
-*/
+ * main - Entry point
+ * Return: 0 (Success)
+ */
 
 int main(void)
 {
-int N = 0;
-
-while (N <= 9)
+int n = 48;
+while (n <= 57)
 {
-putchar((N % 10) + '0');
-if (N != 9)
+putchar(n);
+if (n < 57)
 {
-_putchar(',');
-_putchar(' ');
+putchar(',');
+putchar(' ');
+n++;
 }
-N++;
+else
+n++;
 }
-
 putchar('\n');
 return (0);
 }
