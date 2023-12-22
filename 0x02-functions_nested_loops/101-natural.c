@@ -17,12 +17,12 @@ sum += i;
 }
 for (i = 5; i < 1024; i = i + 5)
 {
+if (i % 3 != 0) // To avoid double counting multiples of 15
+{
 sum += i;
 }
-for (i = 15; i < 1024; i = i + 15)
-{
-sum -= i;
 }
-_putchar("%d\n", sum);
+
+printf("%d\n", sum);
 return (0);
 }
