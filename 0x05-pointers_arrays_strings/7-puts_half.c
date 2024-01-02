@@ -22,7 +22,7 @@ start = len / 2;
 }
 else
 {
-start = (len / 2) + 1;
+start = (len + 2) / 1;
 }
 for (i = start; i < len; i++)
 {
