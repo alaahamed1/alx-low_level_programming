@@ -8,17 +8,12 @@
  * Return: pointer of the new dest
  */
 
-char *_strcpy(char *dest, const char *src)
+char *_strcpy(char *dest, char *src)
 {
-char *newDest;
-if (src == NULL || dest == NULL)
-{
-return NULL;
-}
+int x;
 
-*newDest = dest;
-
-while ((*dest++ = *src++) != '\0');
-
-return newDest;
+for (x = 0; src[x] != 0; x++)
+dest[x] = src[x];
+dest[x] = src[x];
+return (dest);
 }
