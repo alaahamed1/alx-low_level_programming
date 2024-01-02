@@ -15,9 +15,9 @@ if (src == NULL || dest == NULL)
 return NULL;
 }
 
-char *newDest = dest;
+char *originalDest = dest;
 
 while ((*dest++ = *src++) != '\0');
 
-return newDest;
+return originalDest;
 }
