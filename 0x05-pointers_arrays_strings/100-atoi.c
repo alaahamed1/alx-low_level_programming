@@ -1,6 +1,7 @@
 /**
  * _atoi - convert a string to an integer
  * @s: a pointer to the string to convert
+ * Return: the integer converted from the string
  * Returns 0 if there are no numbers in the string
 */
 
