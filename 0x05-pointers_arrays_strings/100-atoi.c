@@ -3,7 +3,7 @@
  * @s: a pointer to the string to convert
 */
 
-int _atoi(char *s)
+int_atoi(char *s)
 {
 int D = 0;
 unsigned int num = 0;
