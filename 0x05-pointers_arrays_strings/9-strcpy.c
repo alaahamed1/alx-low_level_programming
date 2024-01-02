@@ -10,14 +10,15 @@
 
 char *_strcpy(char *dest, const char *src)
 {
+char *newDest;
 if (src == NULL || dest == NULL)
 {
 return NULL;
 }
 
-char *originalDest = dest;
+*newDest = dest;
 
 while ((*dest++ = *src++) != '\0');
 
-return originalDest;
+return newDest;
 }
