@@ -14,7 +14,8 @@ int len = 0;
 while (*(s + len)!= '\0' )
 {
 len++;
-for (int i = len - 1;i >= 0; i--)
+int i;
+for (i = len - 1;i >= 0; i--)
 {
 putchar(*(s + i));
 }
