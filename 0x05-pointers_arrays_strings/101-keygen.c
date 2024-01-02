@@ -2,40 +2,33 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define PASSWORD_LENGTH 15
-
-char* generate_password() {
-int i;
-static const char CHARSET[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=";
-char* password = (char*)malloc((PASSWORD_LENGTH + 1) * sizeof(char));
-
-if (password == NULL)
+/**
+*main - generates random valid passwords
+*for the program 101-crackme.
+*Return: Always 0
+*/
+int main(void)
 {
-fprintf(stderr, "Memory allocation failed\n");
-exit(EXIT_FAILURE);
-}
+int password[100];
+int i, sum, n;
+
+sum = 0;	
 
 srand(time(NULL));
 
-for (i = 0; i < PASSWORD_LENGTH; ++i)
+for (i = 0; i < 100; i++)
 {
-int index = rand() % (sizeof(CHARSET) - 1);
-password[i] = CHARSET[index];
+password[i] = rand() % 78;
+sum += (password[i] + '0');
+putchar(password[i] + '0');
+if ((2772 - sum) - '0' < 78)
+{
+n = 2772 - sum - '0';
+sum += n;
+putchar(n + '0');
+break;
+}
 }
 
-password[PASSWORD_LENGTH] = '\0';
-return password;
-}
-
-void print_password(char* password)
-{
-printf("Generated password: %s\n", password);
-}
-
-int main()
-{
-char* password = generate_password();
-print_password(password);
-free(password);
-return 0;
+return (0);
 }
