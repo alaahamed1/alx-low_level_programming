@@ -1,32 +1,31 @@
-#include <stdio.h>
+/**
+ * _atoi - convert a string to an integer
+ * @s: a pointer to the string to convert
+*/
 
-int _atoi(const char *s)
+int _atoi(char *s)
 {
-int sign = 1;
-int result = 0;
+int D = 0;
+unsigned int num = 0;
 
-while (*s && (*s < '0' || *s > '9'))
+while (*s != 0)
 {
 if (*s == '-')
+D++;
+if (*s >= '0' && *s <= '9')
 {
-sign = -sign;
-}
-s++;
-}
-
 while (*s >= '0' && *s <= '9')
 {
-result = (result * 10) + (*s - '0');
+if (num > 0)
+num *= 10;
+num += *s - '0';
 s++;
 }
-
-return sign * result;
+if (D % 2 != 0)
+num = -num;
+return (num);
 }
-
-int main()
-{
-char str[] = "--123abc456";
-int num = _atoi(str);
-printf("The converted number is: %d\n", num);
-return 0;
+s++;
+}
+return (0);
 }
