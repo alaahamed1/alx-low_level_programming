@@ -23,7 +23,5 @@ for (i = start; i < len; i++)
 {
 putchar(str[i]);
 }
-
-// Print a new line
 putchar('\n');
 }
