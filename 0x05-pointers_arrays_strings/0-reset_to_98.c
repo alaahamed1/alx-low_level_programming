@@ -11,8 +11,3 @@ void reset_to_98(int *n)
 *n = 98;
 }
 
-int main(void)
-{
-int n = 402;
-return (0);
-}
