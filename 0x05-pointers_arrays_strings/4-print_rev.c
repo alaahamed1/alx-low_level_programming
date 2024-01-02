@@ -14,12 +14,10 @@ int i;
 while (s[i] != '\0')
 {
 i++;
-if (i > 0)
-{
+
 for (i = i - 1; i >= 0; i--)
 {
 putchar(s[i]);
-}
 }
 }
 putchar('\n');
