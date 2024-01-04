@@ -2,6 +2,11 @@
 
 /**
  * _strncat - concatenates two strings
+ * appends the src string to the dest string
+ * it will use at most n bytes from src
+ * overwriting the terminating null byte (\0) at the end of dest
+ * and then adds a terminating null byte
+ * src does not need to be null-terminated
  * @dest: first string
  * @src: second string
  * @n: the max number of bytes to concatenate from src
