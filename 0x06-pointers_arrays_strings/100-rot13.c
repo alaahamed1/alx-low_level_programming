@@ -6,22 +6,24 @@
  * Return: a pointer to encoded string
  */
 
+#include <stdio.h>
+
 char *rot13(char *s)
 {
+if (s == NULL) {
+return NULL;
+}
+
 char *encoded = s;
-char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-int i;
+const char *input = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+const char *output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 while (*s != '\0')
 {
-for (i = 0; input[i] != '\0'; i++)
-{
-if (*s == input[i])
-{
-*s = output[i];
-break;
-}
+char *current = strchr(input, *s);
+if (current != NULL) {
+int index = current - input;
+*s = output[index];
 }
 s++;
 }
@@ -39,3 +41,4 @@ printf("Encoded: %s\n", str);
 
 return (0);
 }
+
