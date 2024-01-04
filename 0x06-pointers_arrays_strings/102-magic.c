@@ -20,7 +20,7 @@ int *p;
 */
 
 p = &a[0];
-//it prints 98\n
+/*it prints 98\n*/
 *(p + 2) = 98;
 
 printf("a[2] = %d\n", a[2]);
