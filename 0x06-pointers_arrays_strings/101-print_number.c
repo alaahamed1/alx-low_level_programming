@@ -27,7 +27,7 @@ divisor *= 10;
 
 while (divisor != 0)
 {
-_putchar((n / divisor) + '0');
+_putchar((n / divisor) +'0');
 n %= divisor;
 divisor /= 10;
 }
