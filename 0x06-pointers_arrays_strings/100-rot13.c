@@ -7,38 +7,26 @@
  *
  * Return: A pointer to the encoded string
  */
+
+
 char *rot13(char *s)
 {
-char *encoded;
-const char *input = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-const char *output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-int i;
-
 if (s == NULL)
 return NULL;
 
-encoded = s;
+char *encoded = s;
+char *input = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char *output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-for (i = 0; s[i] != '\0'; i++)
+while (*s != '\0')
 {
-const char *current = strchr(input, s[i]);
+char *current = strchr(input, *s);
 if (current != NULL)
 {
-int index = current - input;
-s[i] = output[index];
+*s = output[current - input];
 }
+s++;
 }
 
 return (encoded);
-}
-
-int main(void)
-{
-char str[] = "Hello, World! This is rot13 encoding.";
-printf("Original: %s\n", str);
-
-rot13(str);
-printf("Encoded: %s\n", str);
-
-return (0);
 }
