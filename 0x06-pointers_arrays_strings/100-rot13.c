@@ -17,10 +17,11 @@ return NULL;
 char *encoded = s;
 char *input = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 char *output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+char *current;
 
 while (*s != '\0')
 {
-char *current = strchr(input, *s);
+current = strchr(input, *s);
 if (current != NULL)
 {
 *s = output[current - input];
