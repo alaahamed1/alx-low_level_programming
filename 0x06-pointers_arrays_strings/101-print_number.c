@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * print_number - function that prints an integer
- * only use _putchar function to print
- * not allowed to use long
- * not allowed to use arrays or pointers
- * not allowed to hard-code special values
- * @n: a number to print
+ * print_number - Prints an integer using _putchar
+ * @n: The number to print
+ * Description: This function prints an integer using only the _putchar function.
+ *It does not use long, arrays, pointers, or hard-coded special values.
+ *If the number is negative, it starts by printing the negative sign '-'
+ *followed by the absolute value of the number.
  */
 
 void print_number(int n)
