@@ -8,6 +8,7 @@
  * not allowed to use arrays or pointers
  * not allowed to hard-code special values
  * @n: The number to print.
+ * Return: 0
  */
 
 void print_number(int n)
