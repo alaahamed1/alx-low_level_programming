@@ -2,10 +2,10 @@
 
 /**
  * *_strncpy - a function that copies a string
- * @dest: first string
- * @src: a string to copy from
- * @n: bytes of string is copied
- * Return: a pointer to the destination string dest
+ * @dest : first string
+ * @src : a string to copy from
+ * @n : bytes of string is copied
+ * Return : a pointer to the destination string dest
  * Return : the dest string
  */
 
