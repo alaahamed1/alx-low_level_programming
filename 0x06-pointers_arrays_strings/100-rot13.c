@@ -4,17 +4,20 @@
 /**
  * rot13 - Encodes a string using rot13.
  * @s: A pointer to the string to be encoded
+ *
  * Return: A pointer to the encoded string
  */
 char *rot13(char *s)
 {
-if (s == NULL)
-return NULL;
-
-char *encoded = s;
+char *encoded;
 const char *input = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 const char *output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 int i;
+
+if (s == NULL)
+return NULL;
+
+encoded = s;
 
 for (i = 0; s[i] != '\0'; i++)
 {
