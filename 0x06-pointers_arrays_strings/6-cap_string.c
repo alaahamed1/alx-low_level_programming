@@ -16,7 +16,8 @@ return (c >= 'a' && c <= 'z');
 int isSeparator(char c)
 {
 int subi;
-char sep[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '\"', '(', ')', '{', '}'};
+char sep[] = {' ', '\t', '\n', ',', ';', '.',
+'!', '?', '\"', '(', ')', '{', '}'};
 for (subi = 0; subi < 13; subi++)
 {
 if (c == sep[subi])
@@ -28,7 +29,8 @@ return (0);
 }
 /**
  * cap_string - all words into uppercase
- * Separators of words: space, tabulation, new line, ,, ;, ., !, ?, ", (, ), {, and }
+ * Separators of words: space, tabulation
+ *  new line, ,, ;, ., !, ?, ", (, ), {, and }
  * @str: the string
  * Return:string changed
  */
