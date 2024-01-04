@@ -3,8 +3,8 @@
 /**
 *_strcat - a function that concatenates two strings
 *@dest: the first string
-*@src: the source string to append 
-*Returns: a pointer to the resulting string dest
+*@src: the source string to append
+ * Return: pointer to the string dest
 */
 
 
