@@ -1,37 +1,35 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
- * rot13 - encodes a string using rot13
- * @s: a pointer to the string
- * Return: a pointer to encoded string
+ * rot13 - Encodes a string using rot13.
+ * @s: A pointer to the string to be encoded
+ * Return: A pointer to the encoded string
  */
-
-#include <stdio.h>
-
 char *rot13(char *s)
 {
-if (s == NULL) {
+if (s == NULL)
 return NULL;
-}
 
 char *encoded = s;
 const char *input = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 const char *output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+int i;
 
-while (*s != '\0')
+for (i = 0; s[i] != '\0'; i++)
 {
-char *current = strchr(input, *s);
-if (current != NULL) {
+const char *current = strchr(input, s[i]);
+if (current != NULL)
+{
 int index = current - input;
-*s = output[index];
+s[i] = output[index];
 }
-s++;
 }
 
 return (encoded);
 }
 
-int main()
+int main(void)
 {
 char str[] = "Hello, World! This is rot13 encoding.";
 printf("Original: %s\n", str);
@@ -41,4 +39,3 @@ printf("Encoded: %s\n", str);
 
 return (0);
 }
-
