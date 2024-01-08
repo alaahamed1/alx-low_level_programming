@@ -19,5 +19,5 @@ return (s);
 s++;
 }
 
-return (*s == c) ? s : NULL;
+return ((*s == c) ? s : NULL);
 }
