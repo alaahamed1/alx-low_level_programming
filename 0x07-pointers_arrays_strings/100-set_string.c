@@ -10,6 +10,7 @@
 
 void set_string(char **s, char *to)
 {
+int i;
 int len = 0;
 
 free(*s);
@@ -27,7 +28,7 @@ printf("Memory allocation failed.\n");
 return;
 }
 
-for (int i = 0; i < len; i++)
+for (i = 0; i < len; i++)
 {
 *(*s + i) = to[i];
 putchar(*(*s + i));
