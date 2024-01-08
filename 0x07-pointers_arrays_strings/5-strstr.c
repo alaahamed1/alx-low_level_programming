@@ -27,10 +27,10 @@ n++;
 }
 
 if (*n == '\0')
-return haystack;
+return (haystack);
 
 haystack++;
 }
 
-return NULL;
+return (NULL);
 }
