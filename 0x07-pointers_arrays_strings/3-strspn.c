@@ -7,19 +7,20 @@
  *
  * Return: The length of a prefix substring.
  */
-
 unsigned int _strspn(char *s, char *accept)
 {
 unsigned int acclen = 0;
+unsigned int len = 0;
+unsigned int i;
+
 while (accept[acclen] != '\0')
 {
 acclen++;
 }
 
-unsigned int len = 0;
 while (s[len] != '\0')
 {
-unsigned int i = 0;
+i = 0;
 while (accept[i] != s[len] && i < acclen)
 {
 i++;
