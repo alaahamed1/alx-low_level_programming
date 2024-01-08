@@ -7,10 +7,6 @@
  */
 
 
-#include "main.h"
-
-int putchar(int character);
-
 void print_chessboard(char (*a)[8])
 {
 unsigned int i = 0, j;
@@ -20,10 +16,10 @@ while (i < 8)
 j = 0;
 while (j < 8)
 {
-putchar(a[i][j]);
+_putchar(a[i][j]);
 j++;
 }
-putchar('\n');
+_putchar('\n');
 i++;
 }
 }
