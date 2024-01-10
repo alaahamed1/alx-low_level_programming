@@ -3,7 +3,7 @@
 /**
  * factorial - a function that returns the factorial of a given number
  * @n: the number to be fact
-@return int 
+ * Return: the factorial of n
  */
 
 int factorial(int n)
@@ -21,5 +21,3 @@ int factorial(int n)
 		return (n * factorial(n - 1));
 	}
 }
-
-
