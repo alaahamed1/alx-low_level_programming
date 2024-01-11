@@ -9,11 +9,9 @@ int prime(int n, int x)
 {
 	if (x > n / 2)
 		return (1);
-	
 	if (n % x == 0)
 		return (0);
-	
-	return prime(n, x + 1);
+	return (prime(n, x + 1));
 }
 
 /**
@@ -25,6 +23,5 @@ int is_prime_number(int n)
 {
 	if (n <= 1)
 		return (0);
-	
-	return prime(n, 2);
+	return (prime(n, 2));
 }
