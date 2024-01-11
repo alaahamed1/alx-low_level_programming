@@ -4,6 +4,7 @@
  * prime - checks if a number is prime
  * @n: the number to check
  * @x: current divisor
+ * Return: true if the number is prime
  */
 int prime(int n, int x)
 {
