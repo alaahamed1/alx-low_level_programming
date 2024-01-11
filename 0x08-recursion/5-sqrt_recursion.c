@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * sr - returns the natural square root of a number
+ * square - returns the natural square root of a number
  * @n: number >= 0
  * @x: possible root
- * Returns the natural square root
+ * Return: the natural square root
  */
 
 int square(int n, int x)
