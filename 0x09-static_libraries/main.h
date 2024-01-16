@@ -24,4 +24,4 @@ char *_strpbrk(char *s, char *accept);
 
 
 
-#endif /*MAIN_H*/
+#endif/*MAIN_H*/
