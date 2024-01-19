@@ -11,23 +11,22 @@
 
 int main(int argc, char *argv[])
 {
+	int x = atoi(argv[1]);
+	int arr[] = {25, 10, 5, 2, 1};
+	int num = sizeof(arr) / sizeof(arr[0]);
+	int i, count = 0;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return 1;
+		return (1);
 	}
-
-	int x = atoi(argv[1]);
 
 	if (x < 0)
 	{
 		printf("0\n");
-		return 0;
+		return (0);
 	}
-
-	int arr[] = {25, 10, 5, 2, 1};
-	int num = sizeof(arr) / sizeof(arr[0]);
-	int i, count = 0;
 
 	for (i = 0; i < num; i++)
 	{
@@ -39,5 +38,5 @@ int main(int argc, char *argv[])
 	}
 
 	printf("%d\n", count);
-	return 0;
+	return (0);
 }
