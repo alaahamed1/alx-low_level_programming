@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - prints all arguments it receives
- * All arguments should be printed, including the first one
- * @argc: number of arguments
- * @argv: arguments
- * Returns: (0) on success
- */
+* main - prints all arguments it receives
+* All arguments should be printed, including the first one
+* @argc: number of arguments
+* @argv: arguments
+* Return: 0 on success
+*/
 
 
 int main(int argc, char *argv[])
