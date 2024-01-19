@@ -1,9 +1,8 @@
-#include <stdlib.h>
-#include "main.h"
+#include <stdio.h>
 
-int main()
+int main(int argc , char *argv[])
 {
-	int n;
-
-	return (0);
+(void) argv;
+printf("%d\n", argc - 1);
+return (0);
 }
