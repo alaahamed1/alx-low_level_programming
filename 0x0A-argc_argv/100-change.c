@@ -11,10 +11,9 @@
 
 int main(int argc, char *argv[])
 {
-	int x = atoi(argv[1]);
+	int x, i, count;
 	int arr[] = {25, 10, 5, 2, 1};
 	int num = sizeof(arr) / sizeof(arr[0]);
-	int i, count = 0;
 
 	if (argc != 2)
 	{
@@ -22,11 +21,15 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
+	x = atoi(argv[1]);
+
 	if (x < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
+	
+	count = 0;
 
 	for (i = 0; i < num; i++)
 	{
