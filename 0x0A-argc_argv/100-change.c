@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 	int x, i, count;
 	int arr[] = {25, 10, 5, 2, 1};
 	int num = sizeof(arr) / sizeof(arr[0]);
+
 	if (argc != 2)
 	{
 		printf("Error\n");
