@@ -10,7 +10,7 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	int i;
-    char *str;
+	char *str;
 	va_list args;
 
 	va_start(args, n);
@@ -30,5 +30,3 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	printf("\n");
 	va_end(args);
 }
-
-
