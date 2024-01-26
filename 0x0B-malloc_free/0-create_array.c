@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
  *create_array - creates an array of chars
  *and initializes it with a specific char
@@ -6,23 +8,21 @@
  * @c: initialized char.
  * Return:pointer to the array NULL if it fails or size = 0
  */
+
 char *create_array(unsigned int size, char c)
 {
-    char *arr = (char *)malloc(size * sizeof(char));
-    unsigned int i;
-
     if (size == 0)
+        return NULL;
+
+    char *ptr = (char *)malloc(sizeof(char) * size);
+
+    if (ptr == NULL)
+        return NULL;
+
+    for (unsigned int i = 0; i < size; i++)
     {
-        return (NULL);
+        *(ptr + i) = c;
     }
 
-    if (arr == NULL)
-    {
-        return (NULL);
-    }
-    for (i = 0; i < size; i++)
-    {
-        arr[i] = c;
-    }
-    return (arr);
+    return ptr;
 }
