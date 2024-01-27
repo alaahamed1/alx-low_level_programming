@@ -6,7 +6,7 @@ void print_str(va_list args);
 void print_float(va_list args);
 void print_char(va_list args);
 void print_int(va_list args);
-void print_all(const char * const format, ...);
+void print_all(const char *const format, ...);
 
 /**
  * print_int - print int
@@ -64,30 +64,29 @@ void print_str(va_list args)
  * @format: string of chars that indicate the format
  * Return: void
  */
-void print_all(const char * const format, ...)
+void print_all(const char *const format, ...)
 {
 	va_list args;
 	char *separator = "";
-	int i , j;
-	d_type data_type[] = { 
+	int i, j;
+	d_type data_type[] = {
 		{'c', print_char},
 		{'i', print_int},
 		{'f', print_float},
-		{'s', print_str}
-	};
+		{'s', print_str}};
 
 	if (format != NULL)
 	{
 		va_start(args, format);
 		i = 0;
-		while (format[i] )
+		while (format[i])
 		{
 			j = 0;
-			while(j < 4 && format[i] != data_type[j].id)
+			while (j < 4 && format[i] != data_type[j].id)
 			{
 				j++;
 			}
-			if (j < 4 )
+			if (j < 4)
 			{
 				printf("%s", separator);
 				data_type[j].func(args);
