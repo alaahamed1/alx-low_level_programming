@@ -26,7 +26,7 @@ void print_int(va_list args)
  */
 void print_char(va_list args)
 {
-	printf("%c", va_arg(args, char));
+	printf("%c", va_arg(args, int));
 }
 
 /**
@@ -37,7 +37,7 @@ void print_char(va_list args)
 
 void print_float(va_list args)
 {
-	printf("%f", va_arg(args, float));
+	printf("%f", va_arg(args, double));
 }
 
 /**
@@ -89,7 +89,7 @@ void print_all(const char * const format, ...)
 			}
 			if (j < 4 )
 			{
-				printf("%c", separator);
+				printf("%s", separator);
 				data_type[j].func(args);
 				separator = ", ";
 			}
