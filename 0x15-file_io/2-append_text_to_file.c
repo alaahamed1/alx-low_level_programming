@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * _strlen - Calculate the length of a string
+ * @c: A pointer to the string whose length is to be calculated
+ * Return: The length of the string (excluding the null terminator)
+ */
 int _strlen(char *c)
 {
 	int i = 0;
@@ -11,8 +15,14 @@ int _strlen(char *c)
 	return i;
 }
 
-int append_text_to_file(const char *filename, char *text_content)
+/**
+ * append_text_to_file - appends text at the end of a file.
+ * @filename: is the name of the file to create
+ * @text_content: is a NULL terminated string to add at the end of a file
+ * Return: 1 on success, -1 on failure
+*/
 
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
 	if (filename == NULL)
@@ -31,27 +41,4 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	close(fd);
 	return (1);
-}
-
-#include <stdio.h>
-#include <stdlib.h>
-#include "main.h"
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(int ac, char **av)
-{
-	int res;
-
-	if (ac != 3)
-	{
-		printf("error");
-		exit(1);
-	}
-	res = append_text_to_file(av[1], av[2]);
-	printf("-> %i)\n", res);
-	return (0);
 }
