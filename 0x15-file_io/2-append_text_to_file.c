@@ -7,12 +7,13 @@
 int _strlen(char *c)
 {
 	int i = 0;
+	
 	while (*c != '\0')
 	{
 		i++;
 		c++;
 	}
-	return i;
+	return (i);
 }
 
 /**
@@ -25,6 +26,7 @@ int _strlen(char *c)
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
+
 	if (filename == NULL)
 	{
 		return (-1);
