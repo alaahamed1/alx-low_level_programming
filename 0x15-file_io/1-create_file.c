@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <string.h>
+#include "main.h"
 /**
  *_putchar - custom putchar function
  *@c: the character to be written
