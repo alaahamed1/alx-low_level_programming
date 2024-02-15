@@ -2,38 +2,48 @@
 #include <stdlib.h>
 #include "main.h"
 
-
 /**
- * read_textfile - read a text file to certain size
- * @filename: the file pointer to readfrom
- * @letters: the number of letters you want to read
- *
- * Return: void
+ *_putchar - custom putchar function
+ *@c: the character to be written
+ *Returns: On success, returns the number of characters written (always 1)
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+/**
+ * read_textfile - read text file from stdin
+ * @filename: the file path if it exists in the same directory
+ * @letters: the number of characters to read
+ * Returns: On success, returns the number of characters read
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	ssize_t n, str, fd;
 	char *buffer;
-	ssize_t o, r, w;
 
 	if (filename == NULL)
 		return (0);
-
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
 		return (0);
-
-	o = open(filename, O_RDONLY);
-	r = read(o, buffer, letters);
-	w = write(STDOUT_FILENO, buffer, r);
-
-	if (o == -1 || r == -1 || w == -1 || w != r)
+	if (fd == -1)
+	free(buffer);
+		return (0);
+	fd = open(filename, O_RDONLY);
+	if (n == -1)
 	{
 		free(buffer);
 		return (0);
 	}
-
+	n = read(fd, buffer, letters);
+	if (str != n)
+	{
+		free(buffer);
+		return (0);
+	}
+	str = write(STDOUT_FILENO, buffer, n);
 	free(buffer);
-	close(o);
-
-	return (w);
+	close(fd);
+	return (n);
 }
