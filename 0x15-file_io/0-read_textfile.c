@@ -18,7 +18,7 @@ int _putchar(char c)
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	ssize_t n = 0;
+	ssize_t n, str;
 	char *buffer;
 
 	if (filename == NULL)
@@ -27,14 +27,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buffer == NULL)
 		return (0);
 	fd = open(filename, O_RDONLY);
-	if (fd < 0)
+	if (fd == -1)
 		return (0);
 	n = read(fd, buffer, letters);
 	if (n == -1)
 	{
 		return (0);
 	}
-	write(STDOUT_FILENO, buffer, n);
+	str = write(STDOUT_FILENO, buffer, n);
+	if (str != n)
+	{
+		return (0);
+	}
 	free(buffer);
 	close(fd);
 	return (n);
