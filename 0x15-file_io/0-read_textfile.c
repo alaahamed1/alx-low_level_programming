@@ -19,7 +19,8 @@ int _putchar(char c)
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t n, str, fd;
+	int fd;
+	ssize_t n, str;
 	char *buffer;
 
 	if (filename == NULL)
@@ -27,23 +28,23 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
 		return (0);
-	if (fd == -1)
-	free(buffer);
-		return (0);
 	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+		free(buffer);
+	return (0);
+	n = read(fd, buffer, letters);
 	if (n == -1)
 	{
 		free(buffer);
-		return (0);
-	}
-	n = read(fd, buffer, letters);
-	if (str != n)
-	{
-		free(buffer);
+		close(fd);
 		return (0);
 	}
 	str = write(STDOUT_FILENO, buffer, n);
 	free(buffer);
 	close(fd);
+	if (str != n)
+	{
+		return (0);
+	}
 	return (n);
 }
