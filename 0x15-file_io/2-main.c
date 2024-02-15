@@ -4,6 +4,8 @@
 
 /**
  * main - check the code
+ * @ac: the filename
+ * @av: The result of this call is stored in res
  * Return: Always 0.
  */
 int main(int ac, char **av)
